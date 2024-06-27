@@ -1,0 +1,17 @@
+/* Custom CSS for the scrollable container to hide the scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: Just to avoid jump effect */
+  }
+  
+  .custom-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Ensure the scrollable area accounts for the footer height */
+  .projects-container {
+    max-height: calc(100vh - 6rem - 4rem - 4rem - 3rem); /* Adjust 6rem (pt-24), 2rem (mb-8), and 4rem (footer height) */
+    padding-right: 1rem; /* Add padding to avoid scrollbar overlap */
+  }
+  
